@@ -1,0 +1,1 @@
+cmd_out/Default/memory3 := flock out/Default/linker.lock g++ -z execstack  -o out/Default/memory3 -Wl,--start-group out/Default/obj.target/memory3/src/main.o out/Default/obj.target/memory3/src/msg.pb.o -Wl,--end-group -lpthread -lboost_system -lboost_thread -lboost_filesystem -lboost_program_options -lcryptopp -lprotobuf -lglog

@@ -1,0 +1,18 @@
+package proto;
+
+enum CertRespType {
+    OK = 0;
+    NOPE = 1;
+}
+
+message CertReq {
+    required bytes user = 1;
+    required bytes nonce = 2;
+    required bytes data = 3;
+}
+
+message CertResp {
+    required CertRespType resp_type = 1;
+    required bytes nonce = 2;
+    optional bytes hmac = 3;
+}
